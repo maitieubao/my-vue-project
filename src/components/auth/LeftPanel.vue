@@ -1,6 +1,6 @@
 <template>
   <div
-    class="left-container relative flex flex-col justify-between p-10 bg-linear-to-b from-[#6c63ff] via-[#4f46e5] to-[#7c6af7] h-173.75 w-2/5 rounded-l-2xl"
+    class="left-container relative flex flex-col justify-between p-10 bg-linear-to-b from-[#6c63ff] via-[#4f46e5] to-[#7c6af7] h-full w-2/5 rounded-l-2xl"
   >
     <div class="absolute -right-12 top-8 size-70 rounded-full bg-[rgba(255,255,255,0.05)]"></div>
     <div class="absolute right-12.5 top-24 size-45 rounded-full bg-[rgba(255,255,255,0.07)]"></div>

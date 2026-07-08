@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import LeftPanel from '@/components/auth/LeftPanel.vue'
-import LoginRightForm from '@/components/auth/LoginRightForm.vue'
+import NavBar from '@/components/NavBar.vue'
+import RegisterRightForm from '@/components/auth/RegisterRightForm.vue'
 import Layout from '@/layouts/Layout.vue'
 </script>
 
 <template>
-  <Layout>
+  <Layout heightClass="h-[714px]">
     <LeftPanel />
-    <LoginRightForm />
+    <RegisterRightForm />
   </Layout>
 </template>

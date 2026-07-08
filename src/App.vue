@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import LoginForm from './Pages/LoginForm.vue';
-
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
   <main>
-    <LoginForm />
+    <RouterView />
   </main>
 </template>
 
