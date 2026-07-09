@@ -4,6 +4,7 @@ import RegisterForm from '@/Pages/RegisterForm.vue'
 import ForgetPasswordForm from '@/Pages/ForgetPasswordForm.vue'
 import ResetPasswordForm from '@/Pages/ResetPasswordForm.vue'
 import VerifyEmailForm from '@/Pages/VerifyEmailForm.vue'
+import SuccessForm from '@/Pages/SuccessForm.vue'
 
 const routes = [
   {
@@ -34,6 +35,11 @@ const routes = [
     path: '/verify-email',
     name: 'verify-email',
     component: VerifyEmailForm,
+  },
+  {
+    path: '/success',
+    name: 'success',
+    component: SuccessForm,
   },
 ]
 

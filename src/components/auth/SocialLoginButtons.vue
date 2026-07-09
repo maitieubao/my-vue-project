@@ -3,7 +3,7 @@
     <a
       :class="[
         'inline-flex items-center justify-center w-42.5 gap-3 px-4 py-2.5 cursor-pointer rounded-xl border border-[#E5E7EB] font-semibold text-[#111827] text-[14px] opacity-100',
-        iconSize === 'big' ? 'h-[42px]' : 'h-15.5'
+        iconSize === 'big' ? 'h-[42px]' : 'h-15.5',
       ]"
     >
       <img :src="google" />
@@ -13,7 +13,7 @@
     <a
       :class="[
         'inline-flex items-center justify-center w-42.5 gap-3 px-4 py-2.5 cursor-pointer rounded-xl border border-[#E5E7EB] font-semibold text-[#111827] text-[14px] opacity-100',
-        iconSize === 'big' ? 'h-[42px]' : 'h-15.5'
+        iconSize === 'big' ? 'h-[42px]' : 'h-15.5',
       ]"
     >
       <img :src="github" />
@@ -33,6 +33,6 @@ const props = defineProps({
   iconSize: { type: String, default: '' },
 })
 
-const google = computed(() => props.iconSize === 'big' ? googleBigIcon : googleIcon)
-const github = computed(() => props.iconSize === 'big' ? githubBigIcon : githubIcon)
+const google = computed(() => (props.iconSize === 'big' ? googleBigIcon : googleIcon))
+const github = computed(() => (props.iconSize === 'big' ? githubBigIcon : githubIcon))
 </script>

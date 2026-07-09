@@ -16,8 +16,13 @@ defineProps({
     </div>
 
     <div class="flex items-center justify-center min-h-[calc(100vh-49px)]">
-      <div class="flex">
-        <div :class="['flex items-center justify-center w-4xl bg-white rounded-2xl', heightClass]">
+      <div class="flex w-full justify-center px-4">
+        <div
+          :class="[
+            'flex items-center justify-center w-full max-w-[500px] lg:max-w-4xl bg-white rounded-2xl overflow-hidden',
+            heightClass,
+          ]"
+        >
           <slot />
         </div>
       </div>

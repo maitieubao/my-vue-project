@@ -1,11 +1,11 @@
 <template>
-  <div class="right-container flex items-center justify-center bg-white h-full w-3/5 rounded-r-2xl">
+  <div class="right-container flex items-center justify-center bg-white h-full w-full lg:w-3/5">
     <form
       @submit.prevent="onSubmit"
       id="right-container__form-forgot-password"
-      class="flex flex-col gap-4 w-88"
+      class="flex flex-col gap-4 w-full max-w-88 px-6 lg:px-0"
     >
-      <img src="@/assets/Login/Lock.svg" class="size-[48px]" />
+      <img src="@/assets/Login/Lock.svg" class="size-12" />
 
       <p class="font-bold text-2xl text-[#111827] leading-8">Forgot password?</p>
 
@@ -15,10 +15,10 @@
 
       <FormInput
         label="New password"
-        id="email"
-        name="email"
+        id="password"
+        name="password"
         placeholder="Create a new password"
-        autocomplete="email"
+        autocomplete="new-password"
         v-model="password"
         :error="errors.password"
         @blur="validateField('password', password)"
@@ -30,10 +30,10 @@
         id="confirm-password"
         name="confirm-password"
         placeholder="Re-enter your new password"
-        autocomplete="confirm-password"
-        v-model="password"
-        :error="errors.password"
-        @blur="validateField('password', password)"
+        autocomplete="new-password"
+        v-model="confirmPassword"
+        :error="errors.confirmPassword"
+        @blur="validateField('confirmPassword', confirmPassword)"
         required
       />
 
@@ -78,15 +78,17 @@ import FormInput from './FormInput.vue'
 import { useAuthValidation } from '@/composables/useAuthValidation'
 
 const password = ref('')
+const confirmPassword = ref('')
 const { errors, validateField } = useAuthValidation()
 
 const validateForm = () => {
-  validateField('email', password.value)
-  return !errors.email
+  validateField('password', password.value)
+  validateField('confirmPassword', confirmPassword.value)
+  return !errors.password && !errors.confirmPassword
 }
 
 const isFormValid = computed(() => {
-  return password.value.trim() !== '' && errors.email === ''
+  return password.value.trim() !== '' && errors.confirmPassword === ''
 })
 
 const onSubmit = () => {

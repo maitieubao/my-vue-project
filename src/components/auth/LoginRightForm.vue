@@ -1,11 +1,9 @@
 <template>
-  <div
-    class="right-container flex items-center justify-center bg-white h-full w-3/5 rounded-r-2xl"
-  >
+  <div class="right-container flex items-center justify-center bg-white h-full w-full lg:w-3/5">
     <form
       @submit.prevent="onSubmit"
       id="right-container__form-login"
-      class="flex flex-col gap-4 min-w-88"
+      class="flex flex-col gap-4 w-full max-w-88 px-6 lg:px-0"
     >
       <p class="font-bold text-2xl text-[#111827] leading-8">Welcome back</p>
 

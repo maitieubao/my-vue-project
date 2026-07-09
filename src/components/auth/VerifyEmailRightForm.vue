@@ -1,9 +1,9 @@
 <template>
-  <div class="right-container flex items-center justify-center bg-white h-full w-3/5 rounded-r-2xl">
+  <div class="right-container flex items-center justify-center bg-white h-full w-full lg:w-3/5">
     <form
       @submit.prevent="onSubmit"
       id="right-container__form-verify-email"
-      class="flex flex-col gap-6 w-88"
+      class="flex flex-col gap-6 w-full max-w-88 px-6 lg:px-0"
     >
       <div class="flex flex-col gap-2">
         <img src="@/assets/Login/Email.svg" class="size-[48px] self-start mb-2" />
@@ -75,10 +75,10 @@ const inputs = ref<HTMLInputElement[]>([])
 
 const handleInput = (index: number, event: Event) => {
   const target = event.target as HTMLInputElement
-  const val = target.value.replace(/[^0-9]/g, '')
-  code.value[index] = val
+  const value = target.value.replace(/[^0-9]/g, '')
+  code.value[index] = value
 
-  if (val && index < 5) {
+  if (value && index < 5) {
     nextTick(() => {
       inputs.value[index + 1]?.focus()
     })

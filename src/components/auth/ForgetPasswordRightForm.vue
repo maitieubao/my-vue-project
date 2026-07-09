@@ -1,9 +1,9 @@
 <template>
-  <div class="right-container flex items-center justify-center bg-white h-full w-3/5 rounded-r-2xl">
+  <div class="right-container flex items-center justify-center bg-white h-full w-full lg:w-3/5">
     <form
       @submit.prevent="onSubmit"
       id="right-container__form-forgot-password"
-      class="flex flex-col gap-4 w-88"
+      class="flex flex-col gap-4 w-full max-w-88 px-6 lg:px-0"
     >
       <img src="@/assets/Login/Email.svg" class="size-[48px]" />
 
